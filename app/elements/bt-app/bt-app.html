@@ -23,15 +23,6 @@
 
 		<h3>Welcome to Bounty App</h3>
 
-		<iron-selector selected="pageData.page"
-									 attr-for-selected="pageName">
-			<a pageName="login" href="#/login">Login</a>
-			<a pageName="signup" href="#/signup">Sign Up</a>
-			<a pageName="task:child" href="#/task/child">Task - Child</a>
-			<a pageName="task:parent" href="#/task/parent">Task - Parent Mode</a>
-			<a pageName="task:parent:add" href="#/task/parent/add">Add Task - Parent Mode</a>
-		</iron-selector>
-
 		<main>
 			<login-page active={{loginActive}}></login-page>
 			<signup-page active={{signupActive}}></signup-page>
@@ -44,7 +35,19 @@
 
 	<script>
 		Polymer({
-			is: 'bt-app'
+			is: 'bt-app',
+
+			ready: function() {
+        this.async(function() {
+          // Otherwise redirection
+          if (!this.route.path ||
+						  '/' ||
+						  '/task/')
+					{
+            this.set('route.path', '/task/child');
+          }
+        });
+      }
 		})
 	</script>
 </dom-module>
