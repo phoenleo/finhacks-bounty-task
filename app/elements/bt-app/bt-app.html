@@ -1,0 +1,31 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="bt-app">
+	<template>
+
+		<carbon-location route={{route}}
+										 use-hash-as-path></carbon-location>
+		<carbon-route route="{{route}}"
+									pattern="/:page}}"
+									data="{{pageData}}"
+									tail="{{pageTail}}"></carbon-route>
+
+		<h1>Welcome to Bounty App</h1>
+
+		<iron-selector selected="pageData.page"
+									 attr-for-selected="pageName">
+			<a pageName="login" href="#/login">Login</a>
+			<a pageName="signup" href="#/signup">Sign Up</a>
+			<a pageName="task:child" href="#/task/child">Task</a>
+			<a pageName="task:parent" href="#/task/parent">Task - Parent Mode</a>
+			<a pageName="task:parent:add" href="#/task/parent/add">Add Task - Parent Mode</a>
+		</iron-selector>
+
+	</template>
+
+	<script>
+		Polymer({
+			is: 'bt-app'
+		})
+	</script>
+</dom-module>
