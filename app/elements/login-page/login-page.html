@@ -1,0 +1,34 @@
+<dom-module id="login-page">
+	<template>
+		<style>
+			:host {
+        display: none;
+      }
+
+      :host([active]) {
+        display: block;
+      }
+		</style>
+
+		<h2>Login Page</h2>
+		<input is="iron-input" bind-value="{{username}}">
+		<input is="iron-input" bind-value="{{password}}" type="password">
+		<p><b>username:</b>{{username}}</p>
+		<p><b>password:{{password}}</b></p>
+	</template>
+
+	<script>
+		Polymer({
+			is: 'login-page',
+
+			properties: {
+        active: {
+          type: Boolean,
+          value: false,
+          reflectToAttribute: true
+        }
+      },
+
+		})
+	</script>
+</dom-module>

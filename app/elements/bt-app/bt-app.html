@@ -1,0 +1,53 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="bt-app">
+	<template>
+
+		<carbon-location route={{route}}
+										 use-hash-as-path></carbon-location>
+
+			<carbon-route route="{{route}}"
+										pattern="/login"
+										data="{{loginData}}"
+										active="{{loginActive}}"></carbon-route>
+
+			<carbon-route route="{{route}}"
+										pattern="/signup"
+										active="{{signupActive}}"></carbon-route>
+
+			<carbon-route route="{{route}}"
+										pattern="/task/:access"
+										active="{{taskActive}}"
+										data="{{taskData}}"
+										tail="{{taskTail}}"></carbon-route>
+
+		<h3>Welcome to Bounty App</h3>
+
+		<main>
+			<login-page active={{loginActive}}></login-page>
+			<signup-page active={{signupActive}}></signup-page>
+			<task-page active={{taskActive}}
+							   access={{taskData.access}}
+								 route={{taskTail}}></task-page>
+		</main>
+
+	</template>
+
+	<script>
+		Polymer({
+			is: 'bt-app',
+
+			ready: function() {
+        this.async(function() {
+          // Otherwise redirection
+          if (!this.route.path ||
+						  '/' ||
+						  '/task/')
+					{
+            this.set('route.path', '/task/child');
+          }
+        });
+      }
+		})
+	</script>
+</dom-module>

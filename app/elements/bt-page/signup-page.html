@@ -1,0 +1,43 @@
+<dom-module id="signup-page">
+	<template>
+		<style>
+			:host {
+        display: none;
+      }
+
+      :host([active]) {
+        display: block;
+      }
+		</style>
+
+		<h2>Signup Page</h2>
+
+		<label>Username</label>
+		<input is="iron-input" bind-value="{{username}}">
+
+		<label>Password</label>
+		<input is="iron-input" bind-value="{{password}}" type="password">
+
+		<label>Retype Password</label>
+		<input is="iron-input" bind-value="{{retypePassword}}" type="password">
+
+		<p><b>username:</b>{{username}}</p>
+		<p><b>password:{{password}}</b></p>
+		<p><b>retype password:{{retypePassword}}</b></p>
+	</template>
+
+	<script>
+		Polymer({
+			is: 'signup-page',
+
+			properties: {
+        active: {
+          type: Boolean,
+          value: false,
+          reflectToAttribute: true
+        }
+      },
+
+		})
+	</script>
+</dom-module>

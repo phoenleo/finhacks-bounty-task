@@ -1,0 +1,40 @@
+<dom-module id="task-page">
+	<template>
+		<style>
+			:host {
+        display: none;
+      }
+
+      :host([active]) {
+        display: block;
+      }
+		</style>
+
+		<carbon-route route="{{route}}"
+									pattern="/add"
+									active="{{addTaskActive}}"></carbon-route>
+
+		<h2>Task Page</h2>
+		<p><b>Access:</b>{{access}}</p>
+		<span>Add Task? {{addTaskActive}}</span>
+	</template>
+
+	<script>
+		Polymer({
+			is: 'task-page',
+
+			properties: {
+        active: {
+          type: Boolean,
+          value: false,
+          reflectToAttribute: true
+        },
+				access: {
+					type: String,
+					value: 'child',
+					reflectToAttribute: true
+				}
+      }
+		})
+	</script>
+</dom-module>
