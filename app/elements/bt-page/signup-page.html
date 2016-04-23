@@ -1,4 +1,4 @@
-<dom-module id="login-page">
+<dom-module id="signup-page">
 	<template>
 		<style>
 			:host {
@@ -10,16 +10,25 @@
       }
 		</style>
 
-		<h2>Login Page</h2>
+		<h2>Signup Page</h2>
+
+		<label>Username</label>
 		<input is="iron-input" bind-value="{{username}}">
+
+		<label>Password</label>
 		<input is="iron-input" bind-value="{{password}}" type="password">
+
+		<label>Retype Password</label>
+		<input is="iron-input" bind-value="{{retypePassword}}" type="password">
+
 		<p><b>username:</b>{{username}}</p>
 		<p><b>password:{{password}}</b></p>
+		<p><b>retype password:{{retypePassword}}</b></p>
 	</template>
 
 	<script>
 		Polymer({
-			is: 'login-page',
+			is: 'signup-page',
 
 			properties: {
         active: {
