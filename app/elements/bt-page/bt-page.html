@@ -1,0 +1,24 @@
+<dom-module id="bt-page">
+	<template>
+		<carbon-route route="{{route}}"
+									pattern="/login"
+									active="{{loginActive}}"></carbon-route>
+
+		<carbon-route route="{{route}}"
+									pattern="/signup"
+									active="{{signupActive}}"></carbon-route>
+
+		<carbon-route route="{{route}}"
+									pattern="/task/:type"
+									active="{{taskActive}}"
+									data="{{taskData}}"></carbon-route>
+
+    <login-page active={{loginActive}}></login-page>
+	</template>
+
+	<script>
+		Polymer({
+			is: 'bt-page'
+		})
+	</script>
+</dom-module>
