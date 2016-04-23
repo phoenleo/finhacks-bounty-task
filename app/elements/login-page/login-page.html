@@ -1,6 +1,16 @@
 <dom-module id="login-page">
 	<template>
-		<h2>Login Page</h2>
+		<style>
+			:host {
+        display: none;
+      }
+
+      :host([active]) {
+        display: block;
+      }
+		</style>
+
+		<h2>Login Page {{active}}</h2>
 		<input is="iron-input" bind-value="{{username}}">
 		<input is="iron-input" bind-value="{{password}}" type="password">
 		<p><b>username:</b>{{username}}</p>
