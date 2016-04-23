@@ -15,8 +15,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Finhacks BCA Bounty Task">
-  <title>Finhacks BCA Bounty Task</title>
+  <meta name="generator" content="Bounty Task">
+  <title>Bounty Task</title>
 
   <!-- Place favicon.ico in the `app/` directory -->
 
@@ -37,7 +37,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Finhacks BCA Bounty Task">
+  <meta name="apple-mobile-web-app-title" content="Bounty Task">
   <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
 
   <!-- Tile icon for Win8 (144x144) -->
@@ -118,12 +118,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <span class="space"></span>
 
           <!-- Toolbar icons -->
-          <paper-icon-button icon="refresh"></paper-icon-button>
-          <paper-icon-button icon="search"></paper-icon-button>
+          <paper-icon-button icon="icons:lock"></paper-icon-button>
 
           <!-- Application name -->
           <div class="middle middle-container">
-            <div class="app-name">Finhacks BCA Bounty Task</div>
+            <div class="app-name">Bounty Task</div>
           </div>
         </paper-toolbar>
 
@@ -137,12 +136,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </section>
 
 						<section data-route="login">
-				      <paper-material elevation="1">
-				        <p>Login to Bounty Task</p>
-								<paper-input label="Username"></paper-input>
-								<paper-input label="Password" type="password"></paper-input>
-								<paper-button raised>Login</paper-button>
-								<paper-button raised>Signup</paper-button>
+							<paper-material elevation="1">
+								<bt-login></bt-login>
 							</paper-material>
 				    </section>
 
