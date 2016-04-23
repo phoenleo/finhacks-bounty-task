@@ -92,6 +92,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <span>Sign Up</span>
           </a>
 
+					<a data-route="task-child" href="{{baseUrl}}task-child">
+            <iron-icon icon="icons:face"></iron-icon>
+            <span>Task: Children</span>
+          </a>
+
+					<a data-route="task-parent" href="{{baseUrl}}task-parent">
+            <iron-icon icon="icons:face"></iron-icon>
+            <span>Task: Parent</span>
+          </a>
+
+					<a data-route="add-task" href="{{baseUrl}}add-task">
+            <iron-icon icon="icons:face"></iron-icon>
+            <span>Add New Task</span>
+          </a>
         </paper-menu>
       </paper-scroll-header-panel>
 
@@ -139,6 +153,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 								<paper-input label="Password" type="password"></paper-input>
 								<paper-input label="Password" type="password"></paper-input>
 								<paper-button raised>Signup</paper-button>
+							</paper-material>
+						</section>
+
+						<section data-route="task-child">
+							<paper-material elevation="1">
+								<p>Task Child</p>
+							</paper-material>
+						</section>
+
+						<section data-route="task-parent">
+							<paper-material elevation="1">
+								<p>Task Parent</p>
+							</paper-material>
+						</section>
+
+						<section data-route="add-task">
+							<paper-material elevation="1">
+								<p>Add Task</p>
 							</paper-material>
 						</section>
 
