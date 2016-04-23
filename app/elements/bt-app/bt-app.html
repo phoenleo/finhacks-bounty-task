@@ -18,7 +18,8 @@
 			<carbon-route route="{{route}}"
 										pattern="/task/:access"
 										active="{{taskActive}}"
-										data="{{taskData}}"></carbon-route>
+										data="{{taskData}}"
+										tail="{{taskTail}}"></carbon-route>
 
 		<h3>Welcome to Bounty App</h3>
 
@@ -35,7 +36,8 @@
 			<login-page active={{loginActive}}></login-page>
 			<signup-page active={{signupActive}}></signup-page>
 			<task-page active={{taskActive}}
-							   access={{taskData.access}}></task-page>
+							   access={{taskData.access}}
+								 route={{taskTail}}></task-page>
 		</main>
 
 	</template>

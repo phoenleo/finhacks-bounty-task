@@ -10,8 +10,13 @@
       }
 		</style>
 
+		<carbon-route route="{{route}}"
+									pattern="/add"
+									active="{{addTaskActive}}"></carbon-route>
+
 		<h2>Task Page</h2>
 		<p><b>Access:</b>{{access}}</p>
+		<span>Add Task? {{addTaskActive}}</span>
 	</template>
 
 	<script>
@@ -29,8 +34,7 @@
 					value: 'child',
 					reflectToAttribute: true
 				}
-      },
-
+      }
 		})
 	</script>
 </dom-module>
