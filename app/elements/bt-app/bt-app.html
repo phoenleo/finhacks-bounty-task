@@ -16,7 +16,7 @@
 										active="{{signupActive}}"></carbon-route>
 
 			<carbon-route route="{{route}}"
-										pattern="/task/:type"
+										pattern="/task/:access"
 										active="{{taskActive}}"
 										data="{{taskData}}"></carbon-route>
 
@@ -26,7 +26,7 @@
 									 attr-for-selected="pageName">
 			<a pageName="login" href="#/login">Login</a>
 			<a pageName="signup" href="#/signup">Sign Up</a>
-			<a pageName="task:child" href="#/task/child">Task</a>
+			<a pageName="task:child" href="#/task/child">Task - Child</a>
 			<a pageName="task:parent" href="#/task/parent">Task - Parent Mode</a>
 			<a pageName="task:parent:add" href="#/task/parent/add">Add Task - Parent Mode</a>
 		</iron-selector>
@@ -34,6 +34,8 @@
 		<main>
 			<login-page active={{loginActive}}></login-page>
 			<signup-page active={{signupActive}}></signup-page>
+			<task-page active={{taskActive}}
+							   access={{taskData.access}}></task-page>
 		</main>
 
 	</template>

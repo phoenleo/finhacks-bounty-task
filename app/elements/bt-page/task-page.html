@@ -1,0 +1,36 @@
+<dom-module id="task-page">
+	<template>
+		<style>
+			:host {
+        display: none;
+      }
+
+      :host([active]) {
+        display: block;
+      }
+		</style>
+
+		<h2>Task Page</h2>
+		<p><b>Access:</b>{{access}}</p>
+	</template>
+
+	<script>
+		Polymer({
+			is: 'task-page',
+
+			properties: {
+        active: {
+          type: Boolean,
+          value: false,
+          reflectToAttribute: true
+        },
+				access: {
+					type: String,
+					value: 'child',
+					reflectToAttribute: true
+				}
+      },
+
+		})
+	</script>
+</dom-module>
