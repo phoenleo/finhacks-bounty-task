@@ -92,9 +92,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <span>Contact</span>
           </a>
 
-		  <a data-route="books" href="{{baseUrl}}books">
-            <iron-icon icon="book"></iron-icon>
-            <span>Books</span>
+		  <a data-route="login" href="{{baseUrl}}login">
+            <iron-icon icon="icons:face"></iron-icon>
+            <span>Login</span>
           </a>
         </paper-menu>
       </paper-scroll-header-panel>
@@ -114,11 +114,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <!-- Application name -->
           <div class="middle middle-container">
             <div class="app-name">Finhacks BCA Bounty Task</div>
-          </div>
-
-          <!-- Application sub title -->
-          <div class="bottom bottom-container">
-            <div class="bottom-title">The future of the web today</div>
           </div>
         </paper-toolbar>
 
@@ -184,9 +179,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-material>
             </section>
 
-			<section data-route="books">
+			<section data-route="login">
 		      <paper-material elevation="1">
-		        <p>Hello, World!</p>
+		        <p>Login to Bounty Task</p>
+						<paper-input label="Username"></paper-input>
+						<paper-input label="Password" type="password"></paper-input>
+						<paper-button raised>Login</paper-button>
 		      </paper-material>
 		    </section>
           </iron-pages>
